@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./library/splide.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- page header -->
+      <header class="header">
+        <form class="search">
+          <input type="search" class="searchbar" placeholder="Search..." />
+          <button type="submit" class="button">
+            <i class="fa-solid fa-magnifying-glass searchicon"></i>
+          </button>
+        </form>
+
+        <!-- no-content div for flexbox -->
+        <div class="nocontent"></div>
+
+        <!-- page navigation including profile -->
+        <nav class="nav">
+          <div class="plusicon">
+            <i class="fa-solid fa-plus logos plus"></i>
+          </div>
+          <div class="notificationsicon">
+            <div class="greenspot"></div>
+            <i class="fa-solid fa-bell logos bell"></i>
+          </div>
+          <div class="profile">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="profilephoto"
+              class="profilephoto"
+            />
+            <p class="profilename">Thomas Jackson</p>
+          </div>
+          <i class="fa-solid fa-chevron-down logos arrow"></i>
+        </nav>
+      </header>
+
+      <!-- slider from library -->
+      <main class="mywrapper">
+        <section class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide coverimg">
+                <div class="single-cover-container">
+                  <img src="./photos/batman.jpg" alt="" />
+                  <div class="cover-movie-info">
+                    <p class="cover-name">The Batman</p>
+                    <p class="duration">duration -2h 20m</p>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide coverimg">
+                <div class="single-cover-container">
+                  <img src="./photos/hobbit.jpg" alt="" />
+                  <div class="cover-movie-info">
+                    <p class="cover-name">The Hobbit</p>
+                    <p class="duration">duration - 2h 2m</p>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide coverimg">
+                <div class="single-cover-container">
+                  <img src="./photos/turtles.jpg" alt="" />
+                  <div class="cover-movie-info">
+                    <p class="cover-name">Pulp Fiction</p>
+                    <p class="duration">duration - 2h 1m</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <!-- slider from library ending -->
+
+      <!-- movies section -->
+      <section class="movies-container">
+        <h1 class="movies-header">All Movies</h1>
+        <div class="movies">
+          <div class="movie-cont">
+            <img
+              src="https://image.tmdb.org/t/p/w500/75aHn1NOYXh4M7L5shoeQ6NGykP.jpg"
+              alt=""
+              class="movie"
+            />
+            <div class="movie-info">
+              <p class="moviename">Mad Max</p>
+              <div class="additionalinfo">
+                <p class="year">1999</p>
+                <p class="rating"><i class="far fa-star"></i> 8.4</p>
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./library/splide.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

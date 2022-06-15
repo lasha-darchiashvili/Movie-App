@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Radio Canada", sans-serif;
+}
+
+.header {
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: rgb(22, 31, 47);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  margin-right: 7rem;
+}
+
+.logos {
+  width: 2rem;
+  color: rgb(142, 145, 158);
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.plus {
+  color: rgb(215, 216, 219);
+}
+
+.arrow {
+  color: rgb(134, 138, 151);
+}
+
+.notificationsicon {
+  position: relative;
+}
+
+.greenspot {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  background-color: rgb(30, 192, 122);
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+}
+
+.profile {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.profilename {
+  color: rgb(220, 222, 224);
+  font-size: 1.2rem;
+  font-weight: 600;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.profilephoto {
+  border-radius: 50%;
+  height: 2.8rem;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.search {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(44, 53, 67);
+  padding: 1rem 1rem;
+  border-radius: 5rem;
+  width: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.searchicon {
+  width: 2rem;
+  color: rgb(102, 108, 121);
+  transition: 500ms;
+}
+
+.searchbar {
+  caret-color: rgb(12, 141, 215);
+  width: 95%;
+  text-align: center;
+  color: rgb(134, 138, 151);
+}
+
+/* styling x button inside "search input"  */
+.searchbar::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url(https://icons-for-free.com/download-icon-cross+delete+icon-1320196185584855591_512.png);
+  background-size: 1.7rem 1.7rem;
+  cursor: pointer;
+}
+
+.searchbar::placeholder {
+  color: rgb(89, 96, 107);
+}
+
+/* clearing button and input default styles */
+button,
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover .searchicon {
+  color: rgb(12, 141, 215);
+}
+.plusicon:hover .plus {
+  color: rgb(12, 141, 215);
+}
+.notificationsicon:hover .bell {
+  color: rgb(12, 141, 215);
+}
+
+.button:active .searchicon {
+  color: #1864ab;
+}
+
+.single-cover-container {
+  height: 35rem;
+  width: auto;
+  position: relative;
+  display: block;
+}
+
+.coverimg img {
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 1rem;
+}
+
+.cover-movie-info {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 12%;
+}
+
+.cover-name {
+  font-size: 5rem;
+  font-weight: 600;
+  color: rgb(238, 238, 238);
+}
+
+.duration {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(115, 118, 139);
+}
+
+.mywrapper {
+  margin-top: 3rem;
+}
+
+.page {
+  background-color: rgb(2, 9, 22);
+  overflow: auto;
+  height: 100vh;
+}
+
+.movies-container {
+  margin: 0 auto;
+  max-width: 75%;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+
+.movies-header {
+  color: rgb(220, 222, 224);
+}
+
+.movies {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 6rem;
+  column-gap: 1rem;
+}
+
+/* movie img */
+.movie {
+  width: 100%;
+  border-radius: 1rem;
+  transition: 500ms;
+  color: rgb(220, 222, 224);
+}
+
+.movie-cont {
+  width: 17rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-cont:hover img {
+  transform: scale(1.1);
+}
+
+.movie-info {
+  position: absolute;
+  color: #f1f3f5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  transform: translateY(3rem);
+  transition: all 0.1s ease-out;
+}
+
+.moviename {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: all 0.6s ease-out;
+}
+
+.additionalinfo {
+  display: flex;
+  justify-content: space-evenly;
+
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: all 0.6s ease-out;
+  font-weight: 500;
+}
+
+/* animation effect, these three on hover goes up on Y axis */
+.movie-cont:hover .movie-info {
+  backdrop-filter: blur(0.8rem);
+  transform: translateY(0px);
+}
+.movie-cont:hover .moviename {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.movie-cont:hover .additionalinfo {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.fa-star {
+  color: yellow;
+}
+
+@media (max-width: 1440px) {
+  .movies {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 1200px) {
+  .movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
